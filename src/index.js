@@ -58,10 +58,10 @@ class MiniSlot extends Phaser.Scene {
     line3.setSize(345, 460);
 
     const imgArr = ["cherry", "banana", "blackberry"];
-
     line1.add(this.generate(line1, imgArr));
     line2.add(this.generate(line2, imgArr));
     line3.add(this.generate(line3, imgArr));
+    //  აქამდე ვარ
 
     debug.fillStyle(0xff0000, 0.2);
     debug.fillRect(398, 293, 345, 460);
@@ -219,162 +219,6 @@ class MiniSlot extends Phaser.Scene {
     return fruits;
   }
 }
-
-// class Column extends Phaser.Scene {
-
-//     constructor (ind)
-//     {
-//         super({ key: 'Column'+ind, active: true });
-//         this.ind = ind;
-//     }
-
-//     preload(){
-
-//     }
-//     create ()
-//     {
-//         console.log(this.textures.list);
-//         this.list = this.add.group();
-//         this.count = 0;
-//         this.stopOrder = true;
-//         // this.cherry = this.add.sprite(570,520,'cherry');
-//         // this.banana = this.add.sprite(570,120,'banana');
-//         // this.blackberry = this.add.sprite(570,-280,'blackberry');
-
-//         let arr = [
-//             'banana'+this.ind,
-//             'banana'+this.ind,
-//             "cherry"+this.ind,
-//             "blackberry"+this.ind,
-//             "cherry"+this.ind,
-//             'banana'+this.ind
-//         ];
-//         // console.log(arr,"Bef");
-//         function shuffle(array) {
-//             let currentIndex = array.length,  randomIndex;
-
-//             // While there remain elements to shuffle...
-//             while (currentIndex != 0) {
-
-//               // Pick a remaining element...
-//               randomIndex = Math.floor(Math.random() * currentIndex);
-//               currentIndex--;
-
-//               // And swap it with the current element.
-//               [array[currentIndex], array[randomIndex]] = [
-//                 array[randomIndex], array[currentIndex]];
-//             }
-
-//             return array;
-//           }
-
-//         shuffle(arr,"after");
-//         //   console.log(arr);
-//         this.x = 0;
-//         this.line = 0;
-//         switch(this.ind){
-//             case "A":
-//                 this.x  = 570;
-//                 this.line=1;
-//                 break;
-//             case "B":
-//                 this.x = 960;
-//                 this.line=2;
-//                 break;
-//             case "C":
-//                 this.x = 1350;
-//                 this.line=3;
-//                 break;
-//             default:
-//                 this.x = 570;
-//                 this.line=0;
-//                 break;
-//         }
-
-//         for (let index = 0; index < arr.length; index++) {
-//             this.list.create(this.x,(520-index*400),arr[index]);
-//         }
-//         // console.log(this.list.children.entries);
-//         // let graphics = this.add.graphics();
-//         // graphics.fillStyle(0xff3300, 1);
-
-//         // graphics.fillRect(100, 200, 600, 300);
-//         // graphics.fillRect(100, 100, 100, 100);
-
-//         // this.add.text(120, 110, 'A', { font: '96px Courier', fill: '#000000' });
-//     }
-
-//     update(){
-
-//         if(this.count<9){
-//             this.list.children.entries.forEach((element,key)=>{
-
-//                 if(this.stopOrder == true){
-//                     if((element.y - 520) == (400*key*-1)){
-//                         this.count = 10;
-//                     }
-//                 }
-
-//                 console.log(element.y);
-//                 element.y+=3;
-
-//                 if(element.y > 850){
-//                     element.y -= 400*6;
-//                 }
-
-//             })
-//         }
-//     }
-// }
-
-// class ColumnB extends Phaser.Scene {
-
-//     constructor ()
-//     {
-//         super({ key: 'ColumnB', active: true });
-//     }
-
-//     preload(){
-
-//     }
-
-//     create ()
-//     {
-//         this.list = this.add.group();
-
-//         // this.cherry = this.add.sprite(570,520,'cherry');
-//         // this.banana = this.add.sprite(570,120,'banana');
-//         // this.blackberry = this.add.sprite(570,-280,'blackberry');
-
-//         let arr = ['banana', 'banana', "cherry", "blackberry", "cherry", 'banana'];
-
-//         for (let index = 0; index < arr.length; index++) {
-//             this.list.create(770,(520-index*400),arr[index]);
-//         }
-//         console.log(this.list.children.entries,"B");
-//     }
-// }
-
-// class ColumnC extends Phaser.Scene {
-
-//     constructor ()
-//     {
-//         super({ key: 'ColumnC', active: true });
-//     }
-
-//     create ()
-//     {
-
-//     }
-// }
-
-// let line1 = new Column("A");
-// let line2 = new Column("B");
-// let line3 = new Column("C");
-
-// console.log(line1,"obj");
-// console.log(line2,"obj");
-// console.log(line3,"obj");
 const config = {
   type: Phaser.CANVAS,
   parent: "phaser-example",
